@@ -10,14 +10,17 @@ class ItemInfo
 	public double discount;
 
 	// Method to Get Data Member Values
-	public void GetInfo(int NumberofItems, double price, double discount)
+	public void GetInfo(int NoItem, double Pr, double Disc)
 	{
 		//Console.WriteLine("ItemName is:", itemName);
-		
+
+		NumberofItems = NoItem; // Assigning Value to NumberofItems
 		Console.WriteLine("Number of Items in Cart is:{0}", NumberofItems);
-		
+
+		price = Pr;             // Assigning Value to Price
 		Console.WriteLine("Price of Item is:{0}", price);
 		
+		discount = Disc;        // Assigning Value to Discount
 		Console.WriteLine("Discount Amount is:{0}", discount);
 		
 	}
@@ -33,7 +36,7 @@ class Payment : ItemInfo
 	public void DisplayTotal()
 	{
 		total = (NumberofItems * price) * (1 - (discount / 100)); // Deducting Dicsount from Totals
-		Console.WriteLine("Total is:{0}", NumberofItems);
+		Console.WriteLine("Total is:{0}", total);
 	}
 
 	public static void Main(string[] args)
